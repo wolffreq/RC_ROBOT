@@ -23,4 +23,6 @@ leftFrame.grid(row = 0, column = 0, padx = 10, pady = 2)
 
 Label(leftFrame, text = "Instructions:").grid(row = 0, column = 0, padx = 10, pady = 2)
 
+Instruct = Label(leftFrame, text = "Welcome to my rc robot project the controls are: \n 'w' to move forward\t's' to reverse\n'a' to go left\t'd' to go right\n 'q' the straighten the wheels ")
+Instruct.grid(row = 1, column = 0, padx = 10, pady = 2)
 

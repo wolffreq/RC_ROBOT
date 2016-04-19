@@ -16,3 +16,8 @@ root = Tk()
 root.wm_title("Robot Control") 
 root.config(background = "#FFFFFF")
 
+
+
+leftFrame = Frame(root ,width = 200, height = 600)
+leftFrame.grid(row = 0, column = 0, padx = 10, pady = 2)
+

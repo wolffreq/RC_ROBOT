@@ -4,6 +4,7 @@ import time
 import sys
 from Tkinter import *
 
+
 GPIO.setmode(GPIO.BOARD)
 servoPin1 = 11
 servoPin2 = 13
@@ -27,6 +28,7 @@ Instruct = Label(leftFrame, text = "Welcome to my rc robot project the controls 
 Instruct.grid(row = 1, column = 0, padx = 10, pady = 2)
 
 def key_input(event):
+
         print ('Key: ', event.char)
         key_press = event.char
 
@@ -37,13 +39,21 @@ def key_input(event):
         elif key_press.lower() == 's':
                 pwm1.start(90)
         elif key_press.lower() == 'd':
-                pwm2.start(5)
-                pwm2.ChangeDutyCycle(14)
+               	pwm2.start(5)
+               	pwm2.ChangeDutyCycle(14)
         elif key_press.lower() == 'a':
                pwm2.start(5)
                pwm2.ChangeDutyCycle(1)
-  elif key_press.lower() == 'q':
-    pwm2.start(5)
-    pwm2.ChangeDutyCycle(6)
+	elif key_press.lower() == 'q':
+		pwm2.start(5)
+		pwm2.ChangeDutyCycle(6)
         else :
                 pwm1.stop()
+
+
+root.bind('<KeyPress>',key_input)
+root.mainloop()
+
+
+
+

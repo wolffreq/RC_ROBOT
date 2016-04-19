@@ -47,3 +47,9 @@ def key_input(event):
     pwm2.ChangeDutyCycle(6)
         else :
                 pwm1.stop()
+
+
+root.bind('<KeyPress>',key_input)
+root.mainloop()
+
+
